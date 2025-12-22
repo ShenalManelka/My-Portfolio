@@ -10,3 +10,6 @@
 .animate-profile-glow {
   animation: profile-float 6s ease-in-out infinite;
 }
+html {
+  scroll-behavior: smooth;
+}
