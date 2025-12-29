@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Column 2: Quick Links */}
+                    {/* Column 2: Quick Links */}
           <motion.div variants={fadeInUp} className="flex flex-col items-center md:items-start space-y-6">
             <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500">Navigation</h3>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
@@ -96,6 +96,8 @@ const Footer = () => {
                 <li key={item}>
                   <Link 
                     to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                    // Added onClick to scroll to top
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="flex items-center group text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     <ChevronRight 
